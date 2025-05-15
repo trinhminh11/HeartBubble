@@ -1,4 +1,26 @@
-Loadr = new (function Loadr(id){
+function start() {
+    let splash = document.getElementById("splash");
+
+    splash.addEventListener("transitionend", () => {
+        document.getElementById("bgm").play();
+        splash.remove();
+    });
+
+    Loadr("loader");
+
+    splash.classList.add("hide");
+};
+
+function play_pause() {
+    const bgm = document.getElementById("bgm");
+    if (bgm.paused) {
+        bgm.play();
+    } else {
+        bgm.pause();
+    }
+};
+
+function Loadr(id){
     const max_size = 24;
     const max_particles = 3500;
     const min_vel = 30;
@@ -148,4 +170,4 @@ Loadr = new (function Loadr(id){
     setInterval(movementTick,16);
     tick();
 
-})("loader");
+};

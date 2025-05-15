@@ -1,23 +1,25 @@
 <!DOCTYPE html>
 <html lang="en" >
 <head>
-  <meta charset="UTF-8">
-  <title>I ❤️ You</title>
-  <link rel="stylesheet" href="./style.css">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+    <meta charset="UTF-8">
+    <title>I ❤️ You</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+    <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script><script  src="./script.js"></script>
 
 </head>
 <body>
-<audio autoplay>
-  {% comment %} <source src="thich_em_hoi_nhieu.mp3" type="audio/mp3"> {% endcomment %}
-  <source src="thich_em_hoi_nhieu.ogg" type="audio/ogg">
-</audio>
+    <!-- splash screen-->
+    <div id="splash" onclick="start()">
+        Hi :>
+    </div> 
 
-<link href='https://fonts.googleapis.com/css?family=Ubuntu:400,300' rel='stylesheet' type='text/css'>
-<div class="loader">
-       <canvas width="1024px" height="1024px" id="loader"></canvas>
-</div>
-  <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script><script  src="./script.js"></script>
+    <audio id = "bgm", src = "thich_em_hoi_nhieu.mp3" loop> </audio>
+
+    <div class="loader" onclick="play_pause()">
+        <canvas width="1024px" height="1024px" id="loader"></canvas>
+    </div>
+
 
 </body>
 </html>
