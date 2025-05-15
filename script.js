@@ -1,7 +1,7 @@
 Loadr = new (function Loadr(id){
     const max_size = 24;
-    const max_particles = 2500;
-    const min_vel = 20;
+    const max_particles = 3500;
+    const min_vel = 30;
     const max_generation_per_frame = 10;
 
     var canvas = document.getElementById(id);
@@ -43,8 +43,8 @@ Loadr = new (function Loadr(id){
     // }
 
     function isInsideHeart(x,y){
-        x = ((x - center_x) / (center_x)) * 3;
-        y = ((y - center_y) / (center_y)) * -3;
+        x = ((x - center_x) / (center_x)) * 1;
+        y = ((y - center_y) / (center_y)) * -1;
 
         const C = 1 - Math.cbrt(x*x);
         
